@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Stream from './stream';
 
 ReactDOM.render(
-  <Feed url="/api/v1/p/" />,
+  <Stream />,
   document.getElementById('reactEntry'),
 );
