@@ -4,9 +4,23 @@ class VideoList extends React.Component {
   constructor(props) {
     super(props);
 
+    this.handleVideoClick = props.onClick
+
     this.state = { 
-      videos: ["Season 1 Episode 1", "Season 1 Episode 2", "Season 1 Episode 3"],
+      videos: [],
     };
+
+    fetch("/api/v1/videos/")
+    .then((response) => {
+      if (!response.ok) throw Error(response.statusText);
+      return response.json();
+    })
+    .then((data) => {
+      this.setState({
+        videos: data.videos
+      });
+    })
+    .catch(error => console.log(error));
   }
 
   componentDidMount() {
@@ -18,7 +32,7 @@ class VideoList extends React.Component {
         <ul>
           {
           this.state.videos.map((videoName, index) =>
-            <li key={index}>{videoName}</li>)
+            <li key={index}><button onClick={() => this.handleVideoClick(videoName)}>{videoName}</button></li>)
             }
         </ul>
       </div>

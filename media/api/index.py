@@ -9,15 +9,13 @@ def get_services():
 
     Example:
     {
-      "posts": "/api/v1/p/",
+      "videos": "/api/v1/videos/",
       "url": "/api/v1/"
     }
     """
-    if "username" not in flask.session:
-        flask.abort(403)
 
     context = {
-        "posts": "/api/v1/p/",
+        "videos": "/api/v1/videos/",
         "url": "/api/v1/"
     }
 

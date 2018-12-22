@@ -20,3 +20,7 @@ button:hover {
 .videoPlayer {
     text-align: center;
 }
+
+ul {
+    list-style-type: none;
+}
