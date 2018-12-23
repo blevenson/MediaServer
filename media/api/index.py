@@ -12,6 +12,7 @@ def get_services():
         "videos": "/api/v1/videos/",
         "watched": "/api/v1/watched/",
         "upload": "/api/v1/upload/",
+        "video": "/api/v1/video/",
         "url": "/api/v1/"
     }
     """
@@ -20,6 +21,7 @@ def get_services():
         "videos": "/api/v1/videos/",
         "watched": "/api/v1/watched/",
         "upload": "/api/v1/upload/",
+        "video": "/api/v1/video/",
         "url": "/api/v1/"
     }
 

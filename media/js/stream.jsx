@@ -57,6 +57,14 @@ class Stream extends React.Component {
       return;
     }
 
+    // Update db
+    fetch('/api/v1/video/' + this.state.currentVideo.videoid, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify({}),
+    })
+
     var array = [...this.state.videos]; // make a separate copy of the array
     var index = array.indexOf(this.state.currentVideo)
     if (index !== -1) {
