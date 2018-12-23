@@ -7,6 +7,7 @@ class Stream extends React.Component {
     super(props);
 
     this.handleVideoPicked = this.handleVideoPicked.bind(this);
+    this.handleDeleteVideo = this.handleDeleteVideo.bind(this);
 
     this.state = { 
       currentVideo: {
@@ -48,13 +49,31 @@ class Stream extends React.Component {
     new_video['watched'] = new_video['watched'] ? 0 : 1;
   }
 
+  handleDeleteVideo() {
+
+    // Check to confirm
+    var r = confirm("Are you sure you want to delete?");
+    if (r != true) {
+      return;
+    }
+
+    var array = [...this.state.videos]; // make a separate copy of the array
+    var index = array.indexOf(this.state.currentVideo)
+    if (index !== -1) {
+      array.splice(index, 1);
+      this.setState({videos: array});
+    }
+
+    this.setState({ currentVideo: array[0]});
+  }
+
   render() {
     return (
       <div className="stream">
         <Video vid={this.state.currentVideo} />
         <p>{this.state.currentVideo.title}</p>
         <button>Prev</button>
-        <button className="deleteButton">Delete</button>
+        <button className="deleteButton" onClick={this.handleDeleteVideo}>Delete</button>
         <button>Next</button>
         <VideoList videos={this.state.videos} onClick={this.handleVideoPicked} />
       </div>
