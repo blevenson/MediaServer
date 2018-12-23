@@ -24,3 +24,76 @@ button:hover {
 ul {
     list-style-type: none;
 }
+
+video {
+    width: auto;
+    height: 500px;
+    padding-top: 60px;
+}
+
+.watched {
+    background-color: #5bd260;
+}
+
+.deleteButton {
+    background-color: #ff4a31;
+}
+
+.deleteButton:hover {
+    background-color: red;
+}
+
+.navbar {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0px;
+    width: 95%;
+    background-color: white;
+    font-weight: bold;
+}
+
+
+.navbar a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+#logoImg {
+    width: 40px;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.navbar li {
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.navbar li:nth-last-child(2) {
+    border-right: none;
+}
+
+.rightSide {
+    float: right;
+}
+
+.leftSide {
+    float: left;
+}
+
+.main {
+    padding-top: 100px;
+}

@@ -9,13 +9,17 @@ def get_services():
 
     Example:
     {
-      "videos": "/api/v1/videos/",
-      "url": "/api/v1/"
+        "videos": "/api/v1/videos/",
+        "watched": "/api/v1/watched/",
+        "upload": "/api/v1/upload/",
+        "url": "/api/v1/"
     }
     """
 
     context = {
         "videos": "/api/v1/videos/",
+        "watched": "/api/v1/watched/",
+        "upload": "/api/v1/upload/",
         "url": "/api/v1/"
     }
 

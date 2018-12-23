@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Media Server</title>
-	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <title>Media Server</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
 
 <body>
@@ -24,9 +24,13 @@
         <hr/>
     </div>
 
-	<!-- React Feed -->
-	<div id="reactEntry">Loading feed ...</div>
-	  <!-- Load JavaScript -->
-	  <script type="text/javascript" src="{{ url_for('static', filename='js/bundle.js') }}"></script>
+    <div class="main">
+        <form action="" method="post" enctype="multipart/form-data">
+          <input type="text" placeholder="title" name="title"/>
+          <input type="text" placeholder="description" name="description"/>
+          <input type="file" name="file">
+          <input type="submit" name="Add" value="add"/>
+        </form>
+    </div>
 </body>
 </html>

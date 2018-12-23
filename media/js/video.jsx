@@ -5,8 +5,7 @@ class Video extends React.Component {
     super(props);
 
     this.state = { 
-      url: props.url,
-      description: "Description",
+      video: props.vid,
     };
   }
 
@@ -16,8 +15,8 @@ class Video extends React.Component {
   render() {
     return (
       <div className="videoPlayer">
-        <video width="320" height="240" controls src={this.props.url}></video>
-        <p id="videoDescription">Description: {this.state.description}</p>
+        <video width="320" height="240" controls src={"/uploads/" + this.props.vid.file}></video>
+        <p id="videoDescription">Description: {this.props.vid.description}</p>
       </div>
     );
   }
