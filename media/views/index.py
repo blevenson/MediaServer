@@ -24,6 +24,15 @@ def show_index():
     return flask.render_template("index.html", **context)
 
 
+@media.app.route('/stream/', methods=['GET'])
+def show_stream():
+    """Display / route."""
+    context = {
+    }
+
+    return flask.render_template("stream.html", **context)
+
+
 @media.app.route('/upload/', methods=['GET', 'POST'])
 def show_upload():
     """Display upload dir."""
