@@ -52,3 +52,8 @@ def get_episode_counts(show_name):
     output.append(int(last_episode_num))
 
     return output
+
+
+def get_episode_counts(show_name, season, episode):
+    # Return a link to the video source for this video
+    return 'https://www.w3schools.com/tags/movie.mp4'

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Media Server</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigatin bar -->
+    <div class="navbar">
+        <ul>
+            <li class="leftSide"><a href="/">
+                <img id="logoImg" src="/static/images/logo.png" alt="logo">
+            </a></li>
+            <li class="leftSide">
+                <a id="logo" href="/">RangerVid</a>
+            </li>
+            </li>
+            <li class="rightSide">
+                <a href="/stream/" style="padding: 10px">stream</a>
+                <a href="/upload/">upload</a>
+            </li>
+        </ul>
+        <hr/>
+    </div>
+
+    <div class="main">
+        <h1>{{title}}</h1>
+        <h2>Season: {{ season }} Episode: {{ episode }}</h2>
+
+        <video width="320" height="240" controls>
+          <source src="{{ source }}">
+          Your browser does not support the video tag.
+        </video>
+
+    </div>
+</body>
+</html>
