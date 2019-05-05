@@ -76,6 +76,7 @@ def display_show(show_name):
     context = {
         'title': title,
         'show_name': show_name,
+        'seasons': [2, 3, 4],
     }
 
     return flask.render_template("show.html", **context)

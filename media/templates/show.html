@@ -28,6 +28,21 @@
     <div class="main">
         <h1>{{title}}</h1>
         <img src='http://www.watchepisodeseries.com/series_images/{{show_name}}.jpg'>
+
+        <ul>
+            {% for season in seasons %}
+                {% set outer_loop = loop %}
+                
+                <h3>Season: {{outer_loop.index}}</h3>
+
+                {% for episode in range(season) %}
+                    <li>
+                        <p><a href="/watch/{{ show_name }}-{{ outer_loop.index }}-{{ episode + 1 }}/">{{episode + 1}}</a></p>
+                    </li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+
     </div>
 </body>
 </html>
